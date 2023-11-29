@@ -1,6 +1,6 @@
 
-import streamlit as st
 import tensorflow as tf
+import streamlit as st
 import numpy as np
 
 # Load the trained model
