@@ -1,3 +1,5 @@
+import subprocess
+subprocess.run(["pip", "install", "tensorflow"])
 
 import tensorflow as tf
 import streamlit as st
