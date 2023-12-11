@@ -3,8 +3,7 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model
-model_path = '/full/path/to/cifar10_model.keras'  # Replace with the actual full path to your model file
-model = tf.keras.models.load_model(model_path)
+model = tf.keras.models.load_model('cifar10_model.keras')
 
 # Streamlit app
 st.title("Image Classification App")
@@ -34,4 +33,3 @@ try:
             st.write(f"{i + 1}. Class: {class_idx}, Confidence: {100 * score:.2f}%")
 except Exception as e:
     st.write("An error occurred:", str(e))
-
