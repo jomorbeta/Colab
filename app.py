@@ -1,26 +1,9 @@
 import tensorflow as tf
 import streamlit as st
 import numpy as np
-import os
 
 # Load the trained model
-model_path = '/full/path/to/cifar10_model.keras'
-
-# Debugging print statements
-print(f"Current working directory: {os.getcwd()}")
-print(f"Model path: {model_path}")
-
-# Check if the model file exists
-if not os.path.exists(model_path):
-    raise FileNotFoundError(f"Model file not found at {model_path}")
-
-# Load the model
-try:
-    model = tf.keras.models.load_model(model_path)
-    print("Model loaded successfully")
-except Exception as e:
-    print(f"An error occurred while loading the model: {str(e)}")
-    raise  # Re-raise the exception to get the full traceback
+model = tf.keras.models.load_model('cifar10_model.keras')
 
 # Streamlit app
 st.title("Image Classification App")
