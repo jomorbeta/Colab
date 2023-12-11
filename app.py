@@ -3,7 +3,9 @@ import streamlit as st
 import numpy as np
 
 # Load the trained model
-model = tf.keras.models.load_model('cifar10_model.keras')
+model_path = '/full/path/to/cifar10_model.keras'  
+model = tf.keras.models.load_model(model_path)
+
 
 # Streamlit app
 st.title("Image Classification App")
